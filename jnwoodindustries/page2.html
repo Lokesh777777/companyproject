@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gallery - J.N. Wood Industries</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View our portfolio of custom furniture and carpentry work at J.N. Wood Industries" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <h2>J.N. Wood Industries</h2>
+            <span class="tagline">Premium Carpenter & Furniture Services</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="page2.html" class="nav-link" aria-current="page">Gallery</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+      <!-- Gallery Hero -->
+      <section class="gallery-hero">
+        <div class="container">
+          <div class="section-header">
+            <h1>Our Work Gallery</h1>
+            <p>Showcasing our finest craftsmanship in custom furniture and carpentry projects</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="furniture">Custom Furniture</button>
+            <button class="filter-btn" data-filter="carpentry">Carpentry Work</button>
+            <button class="filter-btn" data-filter="commercial">Commercial Projects</button>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Custom wooden dining table" />
+              <div class="gallery-overlay">
+                <h3>Custom Dining Table</h3>
+                <p>Handcrafted solid wood dining table with intricate detailing</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden wardrobe" />
+              <div class="gallery-overlay">
+                <h3>Built-in Wardrobe</h3>
+                <p>Space-efficient wardrobe with custom compartments</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974042/pexels-photo-5974042.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kitchen cabinets" />
+              <div class="gallery-overlay">
+                <h3>Kitchen Cabinets</h3>
+                <p>Modern kitchen cabinetry with premium finish</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden bed frame" />
+              <div class="gallery-overlay">
+                <h3>Custom Bed Frame</h3>
+                <p>Elegant wooden bed frame with storage solutions</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="commercial">
+              <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Office furniture" />
+              <div class="gallery-overlay">
+                <h3>Office Furniture</h3>
+                <p>Complete office setup with custom desks and storage</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974043/pexels-photo-5974043.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden staircase" />
+              <div class="gallery-overlay">
+                <h3>Wooden Staircase</h3>
+                <p>Handcrafted staircase with traditional joinery</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bookshelf" />
+              <div class="gallery-overlay">
+                <h3>Custom Bookshelf</h3>
+                <p>Floor-to-ceiling bookshelf with adjustable shelves</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="commercial">
+              <img src="https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant furniture" />
+              <div class="gallery-overlay">
+                <h3>Restaurant Setup</h3>
+                <p>Complete restaurant furniture and interior woodwork</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974044/pexels-photo-5974044.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Window frames" />
+              <div class="gallery-overlay">
+                <h3>Window Frames</h3>
+                <p>Custom wooden window frames with weather sealing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="gallery-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let us bring your vision to life with our expert craftsmanship and quality materials</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Your Quote</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>J.N. Wood Industries</h3>
+            <p>Premium Carpenter & Furniture Services</p>
+            <p>Established 2005 | 19+ Years of Excellence</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>112 M.T.H Road, Villivakkam, Chennai</p>
+            <p>Phone: 26175982, 45552175</p>
+            <p>Email: gayatri_nirmala@yahoo.co.in</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 J.N. Wood Industries Private Limited. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .gallery-hero {
+        padding: 80px 20px 60px;
+        background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+      }
+
+      .gallery-section {
+        padding: 60px 20px 100px;
+      }
+
+      .gallery-filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 10px 20px;
+        border: 2px solid var(--primary-color);
+        background: transparent;
+        color: var(--primary-color);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 500;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        color: white;
+        padding: 30px 20px 20px;
+        transform: translateY(100%);
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      .gallery-overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .gallery-overlay p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        line-height: 1.4;
+      }
+
+      .gallery-cta {
+        padding: 80px 20px;
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .gallery-cta .btn-primary {
+        background: white;
+        color: var(--primary-color);
+      }
+
+      .gallery-cta .btn-primary:hover {
+        background: var(--bg-light);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .gallery-filters {
+          gap: 10px;
+        }
+        
+        .filter-btn {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+        
+        .cta-content h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+
+    <script>
+      // Gallery filtering functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+              if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+                item.style.animation = 'fadeInUp 0.6s ease-out';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
