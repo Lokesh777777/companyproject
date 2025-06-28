@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>J.N. Wood Industries - Premium Carpenter & Furniture Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="J.N. Wood Industries - Leading carpenter and furniture services in Chennai. Custom furniture, timber depot, and sawmill services with 19+ years of experience." />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #8B4513;
+  --secondary-color: #D2691E;
+  --accent-color: #CD853F;
+  --text-dark: #2C1810;
+  --text-light: #6B4423;
+  --bg-light: #FFF8F0;
+  --bg-white: #FFFFFF;
+  --border-color: #E5D5C8;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+  background: var(--bg-white);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.tagline {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 3px 0;
+  transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 80px;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: var(--shadow-hover);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #6B3410;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about {
+  padding: 100px 20px;
+  background: var(--bg-white);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-text > p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.features {
+  display: grid;
+  gap: 25px;
+}
+
+.feature h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.feature p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+/* Services Section */
+.services {
+  padding: 100px 20px;
+  background: var(--bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin: 20px 20px 10px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-light);
+  margin: 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* Locations Section */
+.locations {
+  padding: 100px 20px;
+  background: var(--bg-white);
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.location-card {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.location-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.location-details p {
+  margin-bottom: 10px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.location-details strong {
+  color: var(--text-dark);
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 20px;
+  background: var(--bg-light);
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.form-note {
+  background: var(--bg-white);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border-left: 4px solid var(--primary-color);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--bg-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-disclaimer {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: var(--text-dark);
+  color: white;
+  padding: 60px 20px 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: var(--bg-white);
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card,
+.location-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+    </style>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <h2>J.N. Wood Industries</h2>
+            <span class="tagline">Premium Carpenter & Furniture Services</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#locations" class="nav-link">Locations</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Crafting Excellence in Wood</h1>
+          <p>19+ years of expertise in custom furniture, timber supply, and professional carpentry services across Chennai</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get Quote</a>
+            <a href="#services" class="btn btn-secondary">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.pexels.com/photos/5974042/pexels-photo-5974042.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional carpentry work" />
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>About J.N. Wood Industries</h2>
+            <p>Established as a Private Limited Company with MCA incorporation on 9th June 2005</p>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>19+ Years of Woodworking Excellence</h3>
+              <p>J.N. Wood Industries Private Limited has been serving Chennai and surrounding areas with premium carpentry and furniture services for nearly two decades. Our commitment to quality craftsmanship and customer satisfaction has made us a trusted name in the industry.</p>
+              <div class="features">
+                <div class="feature">
+                  <h4>Expert Craftsmanship</h4>
+                  <p>Skilled artisans with years of experience in custom furniture and carpentry</p>
+                </div>
+                <div class="feature">
+                  <h4>Quality Materials</h4>
+                  <p>Premium timber and plywood sourced from trusted suppliers</p>
+                </div>
+                <div class="feature">
+                  <h4>Custom Solutions</h4>
+                  <p>Tailored furniture and carpentry solutions for homes and businesses</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="https://images.pexels.com/photos/5974041/pexels-photo-5974041.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Woodworking craftsmanship" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive woodworking solutions for all your needs</p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Custom furniture" />
+              <h3>Custom Furniture</h3>
+              <p>Bespoke furniture design and manufacturing for homes, offices, and commercial spaces</p>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/5974043/pexels-photo-5974043.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Carpentry services" />
+              <h3>Professional Carpentry</h3>
+              <p>Expert carpentry services including installations, repairs, and custom woodwork</p>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/5974044/pexels-photo-5974044.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Timber supply" />
+              <h3>Timber Supply</h3>
+              <p>Premium quality timber and plywood supply through our network of depots</p>
+            </div>
+            <div class="service-card">
+              <img src="https://images.pexels.com/photos/5974045/pexels-photo-5974045.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sawmill services" />
+              <h3>Sawmill Services</h3>
+              <p>Professional sawmill operations for custom cutting and timber processing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <h2>J.N. Wood Industries</h2>
+            <span class="tagline">Premium Carpenter & Furniture Services</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="page2.html" class="nav-link" aria-current="page">Gallery</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+      <!-- Gallery Hero -->
+      <section class="gallery-hero">
+        <div class="container">
+          <div class="section-header">
+            <h1>Our Work Gallery</h1>
+            <p>Showcasing our finest craftsmanship in custom furniture and carpentry projects</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="furniture">Custom Furniture</button>
+            <button class="filter-btn" data-filter="carpentry">Carpentry Work</button>
+            <button class="filter-btn" data-filter="commercial">Commercial Projects</button>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Custom wooden dining table" />
+              <div class="gallery-overlay">
+                <h3>Custom Dining Table</h3>
+                <p>Handcrafted solid wood dining table with intricate detailing</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden wardrobe" />
+              <div class="gallery-overlay">
+                <h3>Built-in Wardrobe</h3>
+                <p>Space-efficient wardrobe with custom compartments</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974042/pexels-photo-5974042.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kitchen cabinets" />
+              <div class="gallery-overlay">
+                <h3>Kitchen Cabinets</h3>
+                <p>Modern kitchen cabinetry with premium finish</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden bed frame" />
+              <div class="gallery-overlay">
+                <h3>Custom Bed Frame</h3>
+                <p>Elegant wooden bed frame with storage solutions</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="commercial">
+              <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Office furniture" />
+              <div class="gallery-overlay">
+                <h3>Office Furniture</h3>
+                <p>Complete office setup with custom desks and storage</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974043/pexels-photo-5974043.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wooden staircase" />
+              <div class="gallery-overlay">
+                <h3>Wooden Staircase</h3>
+                <p>Handcrafted staircase with traditional joinery</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="furniture">
+              <img src="https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bookshelf" />
+              <div class="gallery-overlay">
+                <h3>Custom Bookshelf</h3>
+                <p>Floor-to-ceiling bookshelf with adjustable shelves</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="commercial">
+              <img src="https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant furniture" />
+              <div class="gallery-overlay">
+                <h3>Restaurant Setup</h3>
+                <p>Complete restaurant furniture and interior woodwork</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="carpentry">
+              <img src="https://images.pexels.com/photos/5974044/pexels-photo-5974044.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Window frames" />
+              <div class="gallery-overlay">
+                <h3>Window Frames</h3>
+                <p>Custom wooden window frames with weather sealing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="gallery-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let us bring your vision to life with our expert craftsmanship and quality materials</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Your Quote</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <style>
+      .gallery-hero {
+        padding: 80px 20px 60px;
+        background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+      }
+
+      .gallery-section {
+        padding: 60px 20px 100px;
+      }
+
+      .gallery-filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 10px 20px;
+        border: 2px solid var(--primary-color);
+        background: transparent;
+        color: var(--primary-color);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 500;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        color: white;
+        padding: 30px 20px 20px;
+        transform: translateY(100%);
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      .gallery-overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .gallery-overlay p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        line-height: 1.4;
+      }
+
+      .gallery-cta {
+        padding: 80px 20px;
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .gallery-cta .btn-primary {
+        background: white;
+        color: var(--primary-color);
+      }
+
+      .gallery-cta .btn-primary:hover {
+        background: var(--bg-light);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .gallery-filters {
+          gap: 10px;
+        }
+        
+        .filter-btn {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+        
+        .cta-content h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+
+    <script>
+      // Gallery filtering functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+              if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+                item.style.animation = 'fadeInUp 0.6s ease-out';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+      <!-- Locations Section -->
+      <section id="locations" class="locations">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Locations</h2>
+            <p>Multiple locations across Chennai to serve you better</p>
+          </div>
+          <div class="locations-grid">
+            <div class="location-card">
+              <h3>J.N. Wood Industries (Head Office)</h3>
+              <div class="location-details">
+                <p><strong>Address:</strong> 112 M.T.H Road, Villivakkam, Chennai</p>
+                <p><strong>Phone:</strong> 26175982, 45552175</p>
+                <p><strong>Owner:</strong> Bhasker - 98407 27401</p>
+              </div>
+            </div>
+            <div class="location-card">
+              <h3>Balamurgan Timber Depot</h3>
+              <div class="location-details">
+                <p><strong>Address:</strong> 112 M.T.H Road, Villivakkam, Chennai</p>
+                <p><strong>Services:</strong> Timber Supply & Distribution</p>
+              </div>
+            </div>
+            <div class="location-card">
+              <h3>Sri Balamurugan Timber Depot & Saw Mill</h3>
+              <div class="location-details">
+                <p><strong>Address:</strong> No. 94A, Raja Street, Padi, Chennai</p>
+                <p><strong>Phone:</strong> 42846175, 99400 98959</p>
+                <p><strong>Services:</strong> Sawmill Operations & Timber Processing</p>
+              </div>
+            </div>
+            <div class="location-card">
+              <h3>Kamatchi Timber and Plywoods</h3>
+              <div class="location-details">
+                <p><strong>Address:</strong> No. 59 M.T.H Road, Villivakkam, Chennai - 600 049</p>
+                <p><strong>Phone:</strong> 42654475</p>
+                <p><strong>Email:</strong> gayatri_nirmala@yahoo.co.in</p>
+                <p><strong>Services:</strong> Plywood & Timber Supply</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Get in touch for your woodworking needs</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Get In Touch</h3>
+              <div class="contact-item">
+                <h4>Head Office</h4>
+                <p>112 M.T.H Road, Villivakkam, Chennai</p>
+                <p>Phone: 26175982, 45552175</p>
+              </div>
+              <div class="contact-item">
+                <h4>Owner Contact</h4>
+                <p>Bhasker: 98407 27401</p>
+              </div>
+              <div class="contact-item">
+                <h4>Email</h4>
+                <p>gayatri_nirmala@yahoo.co.in</p>
+              </div>
+              <div class="contact-item">
+                <h4>Business Hours</h4>
+                <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                <p>Sunday: By Appointment</p>
+              </div>
+              <div class="contact-item">
+                <h4>Quote Response Time</h4>
+                <p>We respond to all quote requests within 24 hours</p>
+                <p>Urgent requests: Call directly for immediate assistance</p>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3>Request a Quote</h3>
+              <p class="form-note">All quote requests are sent directly to our team at <strong>gayatri_nirmala@yahoo.co.in</strong></p>
+              <form id="quoteForm">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" placeholder="Your Name *" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" placeholder="Email Address (Optional)" />
+                </div>
+                <div class="form-group">
+                  <select id="service" name="service" required>
+                    <option value="">Select Service *</option>
+                    <option value="custom-furniture">Custom Furniture</option>
+                    <option value="carpentry">Professional Carpentry</option>
+                    <option value="timber-supply">Timber Supply</option>
+                    <option value="sawmill">Sawmill Services</option>
+                    <option value="consultation">Free Consultation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" placeholder="Project Details (Optional)" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Quote Request</button>
+                <p class="form-disclaimer">* Required fields. We'll contact you within 24 hours.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>J.N. Wood Industries</h3>
+            <p>Premium Carpenter & Furniture Services</p>
+            <p>Established 2005 | 19+ Years of Excellence</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>112 M.T.H Road, Villivakkam, Chennai</p>
+            <p>Phone: 26175982, 45552175</p>
+            <p>Email: gayatri_nirmala@yahoo.co.in</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 J.N. Wood Industries Private Limited. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+        // Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = '#FFFFFF';
+            navbar.style.backdropFilter = 'none';
+        }
+    });
+
+    // Initialize EmailJS
+    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with actual EmailJS public key
+
+    // Contact form handling with email integration
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.name || !data.phone || !data.service) {
+                showNotification('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            // Phone number validation (Indian format)
+            const phoneRegex = /^[6-9]\d{9}$/;
+            if (!phoneRegex.test(data.phone.replace(/\s+/g, ''))) {
+                showNotification('Please enter a valid 10-digit phone number.', 'error');
+                return;
+            }
+
+            // Email validation (if provided)
+            if (data.email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    showNotification('Please enter a valid email address.', 'error');
+                    return;
+                }
+            }
+
+            // Prepare email template parameters
+            const templateParams = {
+                customer_name: data.name,
+                customer_phone: data.phone,
+                customer_email: data.email || 'Not provided',
+                service_type: data.service,
+                project_details: data.message || 'No additional details provided',
+                submission_date: new Date().toLocaleDateString('en-IN'),
+                submission_time: new Date().toLocaleTimeString('en-IN')
+            };
+
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    showNotification('Thank you! Your quote request has been sent to our team. We will contact you within 24 hours.', 'success');
+                    quoteForm.reset();
+                })
+                .catch(function(error) {
+                    console.error('Email sending failed:', error);
+                    // Fallback: Create mailto link
+                    sendViaMailto(templateParams);
+                    showNotification('Quote request prepared. Please send the email that just opened, or call us directly.', 'info');
+                })
+                .finally(function() {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                });
+        });
+    }
+
+    // Fallback function to create mailto link
+    function sendViaMailto(data) {
+        const subject = encodeURIComponent(`Quote Request from ${data.customer_name} - J.N. Wood Industries`);
+        const body = encodeURIComponent(`
+Dear J.N. Wood Industries Team,
+
+I would like to request a quote for your services.
+
+Customer Details:
+- Name: ${data.customer_name}
+- Phone: ${data.customer_phone}
+- Email: ${data.customer_email}
+- Service Required: ${data.service_type}
+
+Project Details:
+${data.project_details}
+
+Submitted on: ${data.submission_date} at ${data.submission_time}
+
+Please contact me at your earliest convenience.
+
+Thank you!
+        `);
+        
+        const mailtoLink = `mailto:gayatri_nirmala@yahoo.co.in?subject=${subject}&body=${body}`;
+        window.open(mailtoLink);
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.service-card, .location-card, .feature');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Active navigation link highlighting
+    const sections = document.querySelectorAll('section[id]');
+    
+    window.addEventListener('scroll', function() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Click to call functionality
+    const phoneNumbers = document.querySelectorAll('p:contains("Phone:")');
+    phoneNumbers.forEach(p => {
+        const phoneText = p.textContent;
+        if (phoneText.includes('Phone:')) {
+            p.style.cursor = 'pointer';
+            p.addEventListener('click', function() {
+                const phone = phoneText.match(/\d{8,}/)[0];
+                window.location.href = `tel:+91${phone}`;
+            });
+        }
+    });
+});
+
+// Utility function to show notifications
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    
+    // Style the notification
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        max-width: 300px;
+        word-wrap: break-word;
+    `;
+
+    // Set background color based on type
+    switch (type) {
+        case 'success':
+            notification.style.backgroundColor = '#10B981';
+            break;
+        case 'error':
+            notification.style.backgroundColor = '#EF4444';
+            break;
+        case 'info':
+            notification.style.backgroundColor = '#3B82F6';
+            break;
+        default:
+            notification.style.backgroundColor = '#3B82F6';
+    }
+
+    // Add to DOM
+    document.body.appendChild(notification);
+
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, 5000);
+}
+
+// Add CSS for active nav link
+const style = document.createElement('style');
+style.textContent = `
+    .nav-link.active {
+        color: var(--primary-color) !important;
+    }
+    .nav-link.active::after {
+        width: 100% !important;
+    }
+`;
+document.head.appendChild(style);
+
+console.log('J.N. Wood Industries website loaded successfully!');
+    </script>
+  </body>
+</html>
